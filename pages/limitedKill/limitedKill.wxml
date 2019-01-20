@@ -4,7 +4,7 @@
 
 <view>
     <view class='coupon' wx:if="{{currentTab == 0}}">
-        <view class='copuon-item'>
+        <view class='copuon-item' bindtap='getCoupon'>
             <view class='c-head'>
                 <view class='c-price'> ¥
                     <text> 90</text>
@@ -27,7 +27,7 @@
             </view>
         </view>
 
-        <view class='copuon-item disable'>
+        <view class='copuon-item disable' bindtap='getCoupon'>
             <view class='c-head'>
                 <view class='c-price'> ¥
                     <text> 90</text>
@@ -215,4 +215,19 @@
             </view>
         </view>
     </view>
+</view>
+
+
+<view class='w-mask' wx:if="{{showCouponDetail}}">
+    <view class='w-window'>
+        <view class='w-title'>领取成功</view>
+        <view>
+            <view class='w-price'><text>¥</text>50</view>
+            <view class='w-img'><image src='../../images/coupons.jpg'></image></view>
+            <view class='w-titles'>无门槛 全品类全</view>
+            <view class='w-date'>使用时间：2018.12.03 - 2019.02.03</view>
+            <view class='w-subtitle'>查看优惠券到"我的钱包"</view>
+        </view>
+    </view>
+    <view bindtap='closeCoupon' class='w-close ico-close'></view>
 </view>

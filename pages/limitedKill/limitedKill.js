@@ -3,6 +3,7 @@ Page({
 
     data: {
         currentTab:1,
+        showCouponDetail:false
     },
 
    toggleTab(e){
@@ -17,5 +18,17 @@ Page({
     },
     onShareAppMessage: function () {
 
+    },
+    getCoupon(){
+        this.setData({
+            showCouponDetail: true
+
+        })
+    },
+    closeCoupon(){
+        this.setData({
+            showCouponDetail:false
+
+        })
     }
 })
