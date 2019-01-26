@@ -1,0 +1,24 @@
+<view>
+    <view class='c-item' wx:for="{{list}}" wx:key="res">
+        <view class='c-img'>
+            <image src='{{item.classCover}}'></image>
+            <view wx:if="{{item.type == 1}}" class='ico ico-play'></view>
+        </view>
+        <view class='c-cont'>
+            <view>
+                <view class='c-title'>{{item.title}}</view>
+                <view class='c-sub'>{{item.subtitle}}</view>
+            </view>
+            <view class='f-c-sb c-bar'>
+                <view class=''>
+                    <view class='c-price'>
+                        <text class='price'><text>¥</text> {{item.salePrice}}</text>
+                        <text class='price-through'><text>¥</text>{{item.originalPrice}}</text>
+                    </view>
+                    <view class="c-sales">已售{{item.salseTotal}}件</view>
+                </view>
+                <view class='c-add ico-cart'></view>
+            </view>
+        </view>
+    </view>
+</view>

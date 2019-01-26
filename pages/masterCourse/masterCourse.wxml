@@ -1,0 +1,21 @@
+<view>
+    <view class='c-item' wx:for="{{list}}" wx:key="clas" wx:for-item="item">
+        <view class='c-img'>
+            <image src='{{item.classCover}}'></image>
+            <view wx:if="{{item.type == 1}}" class='ico ico-play'></view>
+        </view>
+        <view class='c-cont'>
+            <view>
+                <view class='c-title'>{{item.title}}</view>
+                <view class='c-sub'>{{item.subtitle}}</view>
+            </view>
+            <view class='f-c-sb c-bar'>
+                <view class='c-price'>
+                   
+                </view>
+
+                <view class='button' bindtap='toPlay'>立即观看</view>
+            </view>
+        </view>
+    </view>
+</view>

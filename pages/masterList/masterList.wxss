@@ -1,0 +1,46 @@
+.m-name {
+    font-size: 34rpx;
+    color: #222;
+    margin-bottom: 14rpx;
+}
+
+.m-tag {
+    display: flex;
+}
+
+.m-tag>view {
+    line-height: 44rpx;
+    background: #ebebeb;
+    color: #030303;
+    padding: 0 24rpx;
+    border-radius: 90px;
+    font-size: 24rpx;
+    margin-right: 10rpx;
+}
+
+.m-img {
+    width: 150rpx;
+    height: 150rpx;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-right: 20rpx;
+}
+
+.m-img image {
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.m-item {
+    background: #fff;
+    box-shadow: 2px 3px 8px 0 #ebebeb;
+    display: flex;
+    align-items: center;
+    margin: 30rpx;
+    padding: 24rpx;
+    border-radius: 16rpx;
+}
+
+.m-cont {
+    flex: 1;
+}

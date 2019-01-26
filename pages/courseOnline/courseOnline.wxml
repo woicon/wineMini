@@ -17,7 +17,10 @@
 <view class='tabs' bindtap='toggleLesson'>
     <view wx:for="{{['免费课程','收费课程']}}" 
     class='{{currentTab == index ? "active" : ""}}'  
-    wx:key="TABS" data-index="{{index}}">{{item}}</view>
+    wx:key="TABS" data-index="{{index}}">
+    <view class='ico ico-lock' wx:if="{{index == 1}}"></view>
+        <view class='ico ico-unlock' wx:elif="{{index == 0}}"></view>
+    {{item}}</view>
 </view>
 
 <view class='page-title  f-c-sb'>
@@ -26,69 +29,172 @@
 </view>
 
 <view class='online'>
-    <view class='online-item f-c-c bline'>
-        <image src='../../images/b1.jpg'></image>
-        <view class='online-tag'>
-            <image src='../../images/g1.png'></image>
+     <view class='c-item' wx:for="{{classList}}" wx:key="classList" >
+        <view class='c-img'>
+            <image src='{{item.classCover}}'></image>
+            <image wx:if="{{index== 1 ||index==2 ||index ==3 }}" src='../../images/g{{index}}.png'>
+            
+            </image>
+            <view wx:if="{{item.type == 1}}" class='ico ico-play'></view>
         </view>
-        <view class='online-info'>
+        <view class='c-cont'>
             <view>
-
-                <view class='online-title'>苏格兰官方威士忌大使认证课程</view>
-                <view class='online-intro'>专为餐饮人士打造</view>
-
-                <view class='online-view'>90万</view>
-
+                <view class='c-title'>{{item.title}}</view>
+                <view class='c-sub'>{{item.subtitle}}</view>
             </view>
-
-            <view class='online-price f-c-sb'>
-                <view>
-                    <text class='price'>¥2790</text>
+            <view class='f-c-sb c-bar'>
+                <view class='c-price'>
+                    <text class='price'><text>¥</text> {{item.salePrice}}</text>
+                    <text class='price-through'><text>¥</text>{{item.originalPrice}}</text>
                 </view>
-                <view class='button'>立即观看</view>
+
+                <view class='button' bindtap='toPlay'>免费试看</view>
             </view>
         </view>
     </view>
 
-    <view class='online-item f-c-c'>
-        <image src='../../images/b1.jpg'></image>
-        <view class='online-tag'>
-            <image src='../../images/g2.png'></image>
-        </view>
-        <view class='online-info'>
-            <view>
+  
+</view>
 
-                <view class='online-title'>苏格兰官方威士忌大使认证课程</view>
-                <view class='online-intro'>专为餐饮人士打造</view>
-                 <view class='online-view'>90万</view>
+
+<view class='page-title  f-c-sb'>
+    课程分类
+</view>
+<view class='m-good'>
+    <view>
+        <image src='../../images/b1.jpg'></image>
+        <text> 大咖讲座</text>
+    </view>
+
+    <view>
+        <image src='../../images/b1.jpg'></image>
+        <text> 产区摄影</text>
+    </view>
+
+    <view>
+        <image src='../../images/b1.jpg'></image>
+        <text>酒厂探访</text>
+    </view>
+
+        <view>
+        <image src='../../images/b1.jpg'></image>
+        <text>  吃喝秘籍</text>
+    </view>
+
+    <view>
+        <image src='../../images/b1.jpg'></image>
+        <text>  绝活</text>
+    </view>
+
+    <view>
+        <image src='../../images/b1.jpg'></image>
+        <text> 待酒技巧</text>
+    </view>
+</view>
+
+<view class='page-title  f-c-sb'>
+    理论课
+</view>
+
+<view class='m-good c-grid'>
+    <view>
+        <view class='m-good-img'>
+        <image src='../../images/b1.jpg'></image>
+        <view class='img-txt'>23亿</view>
+        </view>
+        <view class='m-titels'>大咖讲座</view> 
+    </view>
+
+     <view>
+        <view class='m-good-img'>
+        <image src='../../images/b1.jpg'></image>
+   <view class='img-txt'>23亿</view>
+        </view>
+        <view class='m-titels'>大咖讲座</view> 
+    </view>
+
+     <view>
+        <view class='m-good-img'>
+        <image src='../../images/b1.jpg'></image>
+      <view class='img-txt'>23亿</view>
+        </view>
+        <view class='m-titels'>大咖讲座</view> 
+    </view>
+
+     <view>
+        <view class='m-good-img'>
+        <image src='../../images/b1.jpg'></image>
+      <view class='img-txt'>23亿</view>
+        </view>
+        <view class='m-titels'>大咖讲座</view> 
+    </view>
+
+     <view>
+        <view class='m-good-img'>
+        <image src='../../images/b1.jpg'></image>
+       <view class='img-txt'>23亿</view>
+        </view>
+        <view class='m-titels'>大咖讲座</view> 
+    </view>
+
+   
+
+</view>
+
+<view class='page-title  f-c-sb'>
+    餐酒搭配
+</view>
+
+<view>
+    <view class='c-item' wx:for="{{list}}" wx:key="clas" wx:for-item="item">
+        <view class='c-img'>
+            <image src='{{item.classCover}}'></image>
+            <view wx:if="{{item.type == 1}}" class='ico ico-play'></view>
+        </view>
+        <view class='c-cont'>
+            <view>
+                <view class='c-title'>{{item.title}}</view>
+                <view class='c-sub'>{{item.subtitle}}</view>
             </view>
-            <view class='online-price f-c-sb'>
-                <view>
-                    <text class='price'>¥2790</text>
-                    <text class='price-through '> ¥2790</text>
+            <view class='f-c-sb c-bar'>
+                <view class='c-price'>
+                    <text class='price'><text>¥</text>{{item.salePrice}}</text>
                 </view>
-                <view class='button'>立即观看</view>
+
+                <view class='button' bindtap='toPlay'>立即观看</view>
             </view>
         </view>
     </view>
+</view>
 
-    <view class='online-item f-c-c'>
-        <image src='../../images/b1.jpg'></image>
-        <view class='online-tag'>
-            <image src='../../images/g3.png'></image>
+<view class='page-title  f-c-sb'>
+    待酒大师课
+</view>
+
+<view>
+    <view class='m-item' wx:for='{{masterList}}'>
+    
+        <view class='m-img'>
+            <image src='{{item.img}}'></image>
         </view>
-        <view class='online-info'>
+
+        <view class='m-cont'>
             <view>
-                <view class='online-title'>苏格兰官方威士忌大使认证课程</view>
-                <view class='online-intro'>专为餐饮人士打造</view>
-                 <view class='online-view'>90万</view>
-            </view>
-            <view class='online-price f-c-sb'>
-                <view>
-                    <text class='price'>¥2790</text>
+                <view class='m-name'>{{item.name}}</view>
+
+                <view class='m-tag'> 
+                    <block wx:for="{{item.tag}}" wx:key="tags" wx:for-item="titem">
+                        <view >{{titem}}、</view>
+                    </block>
+
                 </view>
-                <view class='button'>立即观看</view>
-            </view>
+
+             </view>
+             <view class='m-bar'>
+              <text class='price'><text>¥</text>  {{item.price}}</text>
+
+                <view class='button'>免费观看</view>
+             </view>
         </view>
     </view>
 </view>

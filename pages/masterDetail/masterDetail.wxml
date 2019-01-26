@@ -1,0 +1,78 @@
+<view class='m-head bline'>
+    <view>
+        <view class='m-item'>
+            <view class='m-img'>
+                <image src='{{detail.masterImg}}'></image>
+            </view>
+            <view class='m-cont'>
+                <view class='m-name'>{{detail.name}}</view>
+                <view class='m-tag'>
+                    <view wx:for="{{detail.tag}}" wx:key="tags" wx:for-item="ditem">{{ditem}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='m-intro'>
+        {{detail.intro}}
+    </view>
+    <view class='m-bar'>
+        <view class='m-bar-like'>他的粉丝 <text class='m-like'> {{detail.like}}</text></view>
+        <view class='button'>
+            <view class='ico-add'></view>关注她 </view>
+    </view>
+</view>
+
+<view class='page-title'>
+    讲师课程
+</view>
+<view>
+    <view class='c-item' wx:for="{{detail.clas}}" wx:key="clas" wx:for-item="citem">
+        <view class='c-img'>
+            <image src='{{citem.classCover}}'></image>
+            <view wx:if="{{citem.type == 1}}" class='ico ico-play'></view>
+        </view>
+        <view class='c-cont'>
+            <view>
+                <view class='c-title'>{{citem.title}}</view>
+                <view class='c-sub'>{{citem.subtitle}}</view>
+            </view>
+            <view class='f-c-sb c-bar'>
+                <view class='c-price'>
+                    <text class='price'><text>¥</text> {{citem.salePrice}}</text>
+                    <text class='price-through'><text>¥</text>{{citem.originalPrice}}</text>
+                </view>
+
+                <view class='button'>免费试看</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class='page-title'>
+    红人推荐
+</view>
+
+<view>
+    <view class='c-item' wx:for="{{detail.recommended}}" wx:key="clas" wx:for-item="citem">
+        <view class='c-img'>
+            <image src='{{citem.classCover}}'></image>
+            <view wx:if="{{citem.type == 1}}" class='ico ico-play'></view>
+        </view>
+        <view class='c-cont'>
+            <view>
+                <view class='c-title'>{{citem.title}}</view>
+                <view class='c-sub'>{{citem.subtitle}}</view>
+            </view>
+            <view class='f-c-sb c-bar'>
+                <view class=''>
+                    <view class='c-price'>
+                        <text class='price'><text>¥</text> {{citem.salePrice}}</text>
+                        <text class='price-through'><text>¥</text>{{citem.originalPrice}}</text>
+                    </view>
+                    <view class="c-sales">已售{{citem.salseTotal}}件</view>
+                </view>
+                <view class='c-add ico-cart'></view>
+            </view>
+        </view>
+    </view>
+</view>

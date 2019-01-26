@@ -1,0 +1,49 @@
+<view class='p-head'>
+    <image class='p-img' src="{{detail.cover}}"></image>
+
+    <view class='p-bar'>
+        <view class='p-name'>{{detail.name}}</view>
+        <view>{{detail.masterTitle}}</view>
+    </view>
+</view>
+
+<view class='page-title'>牛人心得</view>
+
+<view class='p-intro'>
+    {{detail.intro}}
+</view>
+<view class='page-title'>需要掌握的技能</view>
+
+<view class='p-skill'>
+    <view class='p-skill-child' wx:for="{{detail.skill}}" wx:for-index='sindex' wx:for-item="sitem" wx:key="skills">
+        <view class='p-skill-title'> {{skillType[sindex]}}
+        </view>
+        <view class='p-skill-item' wx:for="{{sitem}}" wx:key="skllitem" wx:for-item="kitem">
+            {{kitem}}
+        </view>
+    </view>
+</view>
+<view class='page-title'>建议学习的课程</view>
+
+<view>
+    <view class='c-item' wx:for="{{detail.clas}}" wx:key="clas" wx:for-item="citem">
+        <view class='c-img'>
+            <image src='{{citem.classCover}}'></image>
+            <view wx:if="{{citem.type == 1}}" class='ico ico-play'></view>
+        </view>
+        <view class='c-cont'>
+            <view>
+                <view class='c-title'>{{citem.title}}</view>
+                <view class='c-sub'>{{citem.subtitle}}</view>
+            </view>
+            <view class='f-c-sb c-bar'>
+                <view class='c-price'>
+                    <text class='price'><text>¥</text> {{citem.salePrice}}</text>
+                    <text class='price-through'><text>¥</text>{{citem.originalPrice}}</text>
+                </view>
+
+                <view class='button' bindtap='toPlay'>免费试看</view>
+            </view>
+        </view>
+    </view>
+</view>

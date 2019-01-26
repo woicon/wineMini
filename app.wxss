@@ -18,7 +18,9 @@ page {
     align-items: center;
     justify-content: space-between;
 }
-
+.c-bar{
+    width:100%;
+}
 .price {
     color: #af1654;
     font-size: 34rpx;
@@ -147,7 +149,7 @@ page {
 }
 
 .online-item {
-    margin: 60rpx 30rpx;
+    padding: 60rpx 30rpx;
     position: relative;
 }
 
@@ -221,7 +223,13 @@ page {
     width: 50%;
     line-height: 70rpx;
     background: #f4f4f4;
-    text-align: center;
+    display: flex;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+}
+.tabs .ico{
+    margin-right:15rpx;
 }
 
 .tabs>view:first-child {
@@ -248,4 +256,72 @@ page {
         transform: scaleX(1);
         transform-origin: 0 0;
     }
+}
+
+
+/* //列表 */
+.c-item{
+    display: flex;
+    align-items:center;
+    padding:30rpx;
+    position:relative;
+}
+.c-item::after{
+    content: '';
+    height:1px;
+    transform:scaleX(.5);
+    border-bottom:1px solid #eee;
+    position:absolute;
+    left:-50%;
+    right:-50%;
+    bottom:0;
+}
+.c-item:last-child::after{
+    border:none;
+}
+.c-title{
+    font-size:30rpx;
+    color:#333;
+}
+.c-cont{
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+    justify-content:space-between;
+    flex: 1;
+    height:180rpx;
+}
+.c-sub{
+    font-size:24rpx;
+    color:#9B9B9B;
+}
+.price-through{
+    font-size:24rpx;
+}
+.c-img{
+    width:230rpx;
+    height:180rpx;
+    margin-right:20rpx;
+    border-radius:10rpx;
+    overflow:hidden;
+    position:relative;
+    
+}
+.c-img .ico{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size:80rpx;
+    color:#fff;
+
+}
+.c-img image{
+    width:230rpx;
+    height:180rpx;
+
 }
