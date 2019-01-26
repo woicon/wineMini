@@ -1,2 +1,25 @@
-<!--pages/rankingFree/rankingFree.wxml-->
-<text>pages/rankingFree/rankingFree.wxml</text>
+<view>
+    <view wx:for="{{list}}" class='c-item c-item-free {{index <=2 ? "c-item-col":""}}' wx:key="clas">
+        <view class='c-img'>
+            <image mode='scaleToFill' src='{{item.classCover}}'></image>
+            <image class='c-img-ico' wx:if="{{index <=2}}" src="../../images/g{{index+1}}.png"></image>
+            <view wx:if="{{item.type == 1}}" class='ico ico-play'></view>
+            <view wx:if="{{index <=2}}" class='c-view c-img-view'>
+                {{item.viewAmt}}次播放
+            </view>
+
+        </view>
+        <view class='c-cont'>
+            <view>
+                <view class='c-title'>{{item.title}}</view>
+                <view class='c-sub'>{{item.subtitle}}</view>
+
+            </view>
+            <view class='f-c-sb c-bar'>
+                <view class='c-view' wx:if="{{index > 2}}">{{item.viewAmt}}次播放</view>
+                <view wx:else></view>
+                <view class='button' bindtap='toPlay'>立即观看</view>
+            </view>
+        </view>
+    </view>
+</view>

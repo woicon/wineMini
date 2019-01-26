@@ -4,9 +4,11 @@
 page {
     box-sizing: border-box;
 }
-.flex{
+
+.flex {
     display: flex;
 }
+
 .f-c-c {
     display: flex;
     align-items: center;
@@ -18,17 +20,20 @@ page {
     align-items: center;
     justify-content: space-between;
 }
-.c-bar{
-    width:100%;
+
+.c-bar {
+    width: 100%;
 }
+
 .price {
     color: #af1654;
     font-size: 34rpx;
-    margin-right:20rpx;
+    margin-right: 20rpx;
 }
-.price text{
-    font-size:20rpx;
-    align-items:center;
+
+.price text {
+    font-size: 20rpx;
+    align-items: center;
 }
 
 .price-through {
@@ -82,7 +87,6 @@ page {
     transform: scaleX(0.5);
     bottom: 0;
 }
-
 
 .banner-dot {
     display: flex;
@@ -224,12 +228,13 @@ page {
     line-height: 70rpx;
     background: #f4f4f4;
     display: flex;
-    align-items:center;
-    text-align:center;
-    justify-content:center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
-.tabs .ico{
-    margin-right:15rpx;
+
+.tabs .ico {
+    margin-right: 15rpx;
 }
 
 .tabs>view:first-child {
@@ -245,7 +250,6 @@ page {
     color: #fff;
 }
 
-
 @keyframes sliderLeft {
     0% {
         transform: scaleX(0);
@@ -258,70 +262,134 @@ page {
     }
 }
 
-
 /* //列表 */
-.c-item{
+
+.c-item {
     display: flex;
-    align-items:center;
-    padding:30rpx;
-    position:relative;
+    align-items: center;
+    padding: 30rpx;
+    position: relative;
 }
-.c-item::after{
+
+.c-item::after {
     content: '';
-    height:1px;
-    transform:scaleX(.5);
-    border-bottom:1px solid #eee;
-    position:absolute;
-    left:-50%;
-    right:-50%;
-    bottom:0;
+    height: 1px;
+    transform: scaleX(0.5);
+    border-bottom: 1px solid #eee;
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    bottom: 0;
 }
-.c-item:last-child::after{
-    border:none;
+
+.c-item:last-child::after {
+    border: none;
 }
-.c-title{
-    font-size:30rpx;
-    color:#333;
+
+.c-title {
+    font-size: 30rpx;
+    color: #333;
 }
-.c-cont{
+
+.c-cont {
     display: flex;
     flex-direction: column;
-    align-items:left;
-    justify-content:space-between;
+    align-items: left;
+    justify-content: space-between;
     flex: 1;
-    height:180rpx;
+    height: 180rpx;
 }
-.c-sub{
-    font-size:24rpx;
-    color:#9B9B9B;
+
+.c-sub {
+    font-size: 24rpx;
+    color: #9b9b9b;
 }
-.price-through{
-    font-size:24rpx;
+
+.price-through {
+    font-size: 24rpx;
 }
-.c-img{
-    width:230rpx;
-    height:180rpx;
-    margin-right:20rpx;
-    border-radius:10rpx;
-    overflow:hidden;
-    position:relative;
-    
+
+.c-img {
+    width: 230rpx;
+    height: 180rpx;
+    margin-right: 20rpx;
+    border-radius: 10rpx;
+    overflow: hidden;
+    position: relative;
 }
-.c-img .ico{
+
+.c-img .ico {
     position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80rpx;
+    color: #fff;
+}
+
+.c-view {
+    display: flex;
+    align-items: center;
+    font-size:24rpx;
+    color:#999;
+    margin-top:10rpx;
+}
+
+.c-view::before {
+    content: '';
+    border: 10rpx solid transparent;
+    border-left-color: #999;
+}
+
+.c-img image {
+    width: 230rpx;
+    height: 180rpx;
+}
+.c-item-col{
+    display: block;
+    padding:30rpx;
+    margin:0 auto;
+}
+
+.c-item-col .c-img{
+    height: 400rpx;
+    width:100%;
+}
+
+.c-item-col .c-img image{
+    width:100%;
+    height: 400rpx;
+}
+.c-item-col .c-cont{
+    height:inherit;
+}
+.c-item-col .c-img{
+    position:relative;
+}
+.c-item-col .c-img .c-img-ico{
+    width:90rpx;
+    height:90rpx;
+    position:absolute;
+    left:20rpx;
+    top:-10rpx;
+    z-index:2;
+}
+.c-img-view{
+    position:absolute;
     left:0;
     right:0;
-    top:0;
     bottom:0;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    font-size:80rpx;
+    line-height:70rpx;
+    justify-content:flex-end;
+    background:rgba(0, 0, 0, .5);
     color:#fff;
-
+    font-size:24rpx;
+    padding:0 30rpx;
 }
-.c-img image{
-    width:230rpx;
-    height:180rpx;
-
+.c-item-col .c-title{
+    line-height:90rpx;
 }
