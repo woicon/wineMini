@@ -19,6 +19,8 @@
         "pages/rankingFree/rankingFree",
         "pages/rankingCharge/rankingCharge",
         "pages/professional/professional",
+        "pages/skuCategory/skuCategory",
+        "pages/skuRanking/skuRanking",
         "pages/play/play"
     ],
     "window": {
