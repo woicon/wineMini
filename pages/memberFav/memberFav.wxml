@@ -1,0 +1,33 @@
+<view class="tab-line bline">
+    <view wx:for="{{['课程','文章','商品']}}" wx:key="tab" class='{{currentTab == index ? "active":""}}'>{{item}}</view>
+</view>
+
+<view wx:if="{{currentTab == 0}}">
+    <view class='c-item' wx:for="{{course}}" wx:key="clas" wx:for-item="item">
+        <view class='c-img'>
+            <image src='{{item.classCover}}'></image>
+            <view wx:if="{{item.type == 1}}" class='ico ico-play'></view>
+        </view>
+        <view class='c-cont'>
+            <view>
+                <view class='c-title'>{{item.title}}</view>
+                <view class='c-sub'>{{item.subtitle}}</view>
+            </view>
+            <view class='f-c-sb c-bar'>
+                <view class='c-price'>
+                    <text class='price'><text>¥</text> {{item.salePrice}}</text>
+                    <text class='price-through'><text>¥</text>{{item.originalPrice}}</text>
+                </view>
+
+                <view class='button'>免费试看</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view wx:if="{{currentTab == 1}}">
+    
+</view>
+<view wx:if="{{currentTab == 2}}">
+
+</view>

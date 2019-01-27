@@ -1,0 +1,9 @@
+<view class='v-head'>
+    <image class='v-img' src='../../images/vip.jpg'></image>
+    <view>
+    VIP3级别</view>
+</view>
+<view class='v-rules'>
+    <view class='v-title'>VIP规则</view>
+    <view class='v-cont'>{{rules}}</view>
+</view>

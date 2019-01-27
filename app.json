@@ -5,6 +5,8 @@
         "pages/courseOnline/courseOnline",
         "pages/courseDetail/courseDetail",
         "pages/member/member",
+        "pages/memberVip/memberVip",
+        "pages/memberFav/memberFav",
         "pages/mall/mall",
         "pages/coupon/coupon",
         "pages/cargo/cargo",

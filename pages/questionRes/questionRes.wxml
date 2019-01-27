@@ -13,7 +13,7 @@
         <view class='q-cont bline'>
             <view wx:for="{{item.list}}" class='q-items' wx:for-item="sitem" wx:for-index="sindex">
 <view class="q-radio {{indexs[sindex] == item.youRes ? 'active' : ''}}"></view>
-               <text> {{indexs[sindex]}}、{{sitem}}</text>
+               <text> {{indexs[sindex]}}.{{sitem}}</text>
             </view>
         </view>
         <view>正确选项：{{item.res}}</view>

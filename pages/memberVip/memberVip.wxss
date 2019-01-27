@@ -1,0 +1,30 @@
+.v-head{
+    display: flex;
+    align-items:center;
+    color:#FF9F02;
+    font-weight:800;
+    padding:30rpx;
+}
+.v-rules{
+    background:#F3F3F3;
+    border-radius:20rpx;
+    min-height: 338rpx;
+    margin:0 30rpx 30rpx;
+    padding:50rpx;
+}
+.v-img{
+    width:60rpx;
+    height:60rpx;
+    margin-right:20rpx;
+}
+.v-title{
+    font-size:30rpx;
+    font-weight:800;
+    margin-bottom:30rpx;
+    color:#333;
+}
+.v-cont{
+    font-size: 26rpx;
+    line-height:2;
+    color:#666666;
+}
