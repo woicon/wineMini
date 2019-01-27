@@ -13,28 +13,27 @@ Page({
         },
         playType: ['播放', '试看', '试看中', '未观看'],
         courseList: [{
-            title: "苏格兰官方威士忌大使认证课程",
-            url: 'https://sdfsf.com',
-            type: 0,
-        }, {
-            title: "苏格兰官方威士忌大使认证课程",
-            url: 'https://sdfsf.com',
-            type: 0,
-        }, {
-            title: "苏格兰官方威士忌大使认证课程",
-            url: 'https://sdfsf.com',
-            type: 0,
-        }, {
-            title: "苏格兰官方威士忌大使认证课程",
-            url: 'https://sdfsf.com',
-            type: 0,
-        }
+                title: "苏格兰官方威士忌大使认证课程",
+                url: 'https://sdfsf.com',
+                type: 0,
+            }, {
+                title: "苏格兰官方威士忌大使认证课程",
+                url: 'https://sdfsf.com',
+                type: 0,
+            }, {
+                title: "苏格兰官方威士忌大使认证课程",
+                url: 'https://sdfsf.com',
+                type: 0,
+            }, {
+                title: "苏格兰官方威士忌大使认证课程",
+                url: 'https://sdfsf.com',
+                type: 0,
+            }
 
 
         ],
         currentTab: 1,
-        playId:2,
-        free:false
+        free:false,
     },
     onLoad(options) {
 
@@ -45,7 +44,7 @@ Page({
         })
     },
 
-    onShareAppMessage () {
+    onShareAppMessage: function() {
 
     }
 })

@@ -52,8 +52,8 @@
     width: 30%;
     height: 66rpx;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
 }
 
 .tab view {
@@ -66,6 +66,7 @@
     justify-content: space-between;
     text-align: center;
     border-radius: 4rpx;
+    width:100%;
 }
 
 .tab view.active {
@@ -74,19 +75,27 @@
     color: #fff;
 }
 
-
 .tab-img image {
     width: 120rpx;
     height: 120rpx;
 }
-.tab-img swiper{
-    height:180rpx;
+
+.tab-img swiper {
+    height: 180rpx;
 }
-.tab-img view{
+
+.tab-img view {
     display: flex;
-    align-items:center;
-    justify-content:center;
+    align-items: center;
+    justify-content: center;
+    width: 130rpx;
+    height: 130rpx;
+    background: #fff;
+    border-color: #fff;
+    border-radius:10rpx;
+    box-shadow: 0 2px 9px 0 rgba(213, 204, 204, 0.50);
 }
-.tab-img view.active{
-    background:#fff;
+
+.tab-img view.active {
+    background: #fff;
 }

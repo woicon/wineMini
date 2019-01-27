@@ -1,23 +1,20 @@
-<view class='video'>
-    <video src="//v1-tt.ixigua.com/1fca540a23cfa58c21ab5440eced7526/5c4d438b/video/m/2205ea942b048be4dd4a70ee36ba063c2c511614cc54000025e6be1af1b7/?rc=ajVlcG9sZ3BrazMzOjczM0ApQHRAbzY1NDo2MzQzMzM2NDUzNDVvQGgzdSlAZjN1KWRzcmd5a3VyZ3lybHh3Zjc2QHJlXm0waWVvL18tLV4tL3NzLW8jbyMxMS0tMTUtLi0yLzQuNi06I28jOmEtcSM6YHZpXGJmK2BeYmYrXnFsOiMzLl4%3D&vfrom=xgplayer"></video>
+<view>
+    <image class='d-cover' src='{{detail.classCover}}'></image>
 </view>
 <view class='tab-line bline'>
     <view bindtap='toggleTab' wx:for="{{['课程介绍','课程目录']}}" class='{{currentTab == index ?"active":""}}' data-index="{{index}}" wx:key="stab">{{item}}</view>
 </view>
-<view>
 
-</view>
 <view wx:if="{{currentTab == 1}}" class='d-list'>
-    <view wx:for="{{courseList}}" class='bline {{playId==index?"active":""}}' bindtap='toPlay'>
-        <text>{{index}}、{{item.title}}</text>
-        <view class='ico ico-play'>{{playId==index?"播放中":"播放"}} </view>
+    <view wx:for="{{courseList}}" class='bline {{item.isPlay?"active":""}}' bindtap='toPlay'>
+        <text> {{item.title}}</text>
+        <view class='ico ico-play'>{{playType[item.type]}} </view>
     </view>
 </view>
 <view wx:if="{{currentTab == 0}}">
     <view class='d-head bline'>
         <view class='d-title'>{{detail.title}}</view>
-        <view class='d-amt'>
-            <text>学习人数</text> {{detail.learnAmt}}</view>
+        <view class='d-amt'><text>学习人数</text> {{detail.learnAmt}}</view>
     </view>
     <view class="page-title">讲师介绍</view>
 
@@ -45,16 +42,16 @@
 
 <view class='sku-bar tline'>
     <view class='sku-fav '>
-        <view bindtap='skuFav'>
-            <view class='ico ico-comment'></view> 咨询 </view>
+        <view bindtap='skuFav' class='{{isFav?"active":""}}'>
+            <view class='ico ico-star{{isFav?"-sel":""}}'></view> 收藏 </view>
         <button open-type='share'>
             <view class='ico ico-share'></view>转发</button>
     </view>
-
     <view class='button' wx:if="{{free}}">立即观看</view>
 
             <view class='sku-btn' wx:else>
         <view class='sku-add'>加入购物车</view>
         <view class='sku-buy'>立即购买</view>
     </view>
+
 </view>

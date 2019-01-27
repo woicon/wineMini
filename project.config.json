@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 20,
 			"list": [
 				{
 					"id": -1,
@@ -151,6 +151,18 @@
 					"id": -1,
 					"name": "skuRanking",
 					"pathName": "pages/skuRanking/skuRanking",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "courseDetail",
+					"pathName": "pages/courseDetail/courseDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "play",
+					"pathName": "pages/play/play",
 					"query": ""
 				}
 			]

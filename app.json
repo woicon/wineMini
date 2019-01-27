@@ -3,6 +3,7 @@
         "pages/index/index",
         "pages/course/course",
         "pages/courseOnline/courseOnline",
+        "pages/courseDetail/courseDetail",
         "pages/member/member",
         "pages/mall/mall",
         "pages/coupon/coupon",
