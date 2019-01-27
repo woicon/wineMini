@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 18,
+			"current": 17,
 			"list": [
 				{
 					"id": -1,
@@ -142,15 +142,16 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "rankingCharge",
+					"id": 17,
+					"name": "skuCategory",
 					"pathName": "pages/skuCategory/skuCategory",
 					"query": ""
 				},
 				{
 					"id": -1,
 					"name": "skuRanking",
-					"pathName": "pages/skuRanking/skuRanking"
+					"pathName": "pages/skuRanking/skuRanking",
+					"query": ""
 				}
 			]
 		}

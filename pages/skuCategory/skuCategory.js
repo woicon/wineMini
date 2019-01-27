@@ -76,6 +76,12 @@ Page({
             }
 
         ],
+        isImgCat:true,
+       //= category: ['分类1', '分类2', '分类3', '分类3'],
+        category: ['../../images/ic1.jpg',
+         '../../images/ic2.jpg', 
+         '../../images/ic3.jpg', 
+         '../../images/ic4.jpg'],
     },
     toggleCat(e){
         this.setData({

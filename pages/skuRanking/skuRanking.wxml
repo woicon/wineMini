@@ -1,31 +1,34 @@
 
 <view class='tab'>
-    <swiper display-multiple-items='3' next-margin='50px'>
-        <swiper-item wx:for="{{['分类1','分类2','分类3','分类3']}}">
-        <view bindtap='toggleCat'
+        <view bindtap='toggleCat' wx:for="{{['热销','新品','价格']}}"
             class='{{currentTab == index ?"active":""}}'
-         data-index="{{index}}">
-        {{item}}</view></swiper-item>
-    </swiper>
+         data-index="{{index}}"
+         data-title="{{item}}">
+        {{item}}</view>
 </view>
 
-<view class='g'>
-    <view class='g-item' wx:for="{{list}}">
-        <view class='g-img'> 
-            <image src='{{item.skuCover}}'></image>
+<view>
+    <view class='c-item' wx:for="{{list}}" wx:key="res">
+        <view class='c-img'>
+            <image src='{{item.classCover}}'></image>
+            <view wx:if="{{item.type == 1}}" class='ico ico-play'></view>
         </view>
-
-        <view class='g-cont'>
-        <view class='g-title'>{{item.title}}</view>
-
-        <view class='g-bar'>
-        
-          <view class='price'> <text>¥</text>  {{item.salePrice}}</view> 
-
-            <view class='g-sale'>已售{{item.saleAmt}}件</view>
+        <view class='c-cont'>
+            <view>
+                <view class='c-title'>{{item.title}}</view>
+                <view class='c-sub'>{{item.subtitle}}</view>
+            </view>
+            <view class='f-c-sb c-bar'>
+                <view class=''>
+                    <view class='c-price'>
+                        <text class='price'><text>¥</text> {{item.salePrice}}</text>
+                        <text class='price-through'><text>¥</text>{{item.originalPrice}}</text>
+                    </view>
+                    <view class="c-sales">已售{{item.salseTotal}}件</view>
+                </view>
+                <view class='c-add ico-cart'></view>
+            </view>
         </view>
-        </view>
-        
     </view>
 </view>
 <view class='list-more'>

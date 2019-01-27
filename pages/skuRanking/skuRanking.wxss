@@ -1,1 +1,7 @@
-/* pages/skuRanking/skuRanking.wxss */
+.tab>view{
+    width: 33%;
+}
+.tab{
+    display: flex;
+    justify-content:space-between;
+}

@@ -1,65 +1,92 @@
 .g-item {
     background: #fff;
-      width:336rpx;
+    width: 336rpx;
     border-radius: 10rpx;
     box-shadow: 0 4rpx 24rpx 0 rgba(213, 204, 204, 0.50);
-    margin-bottom:30rpx;
-    overflow:hidden;
+    margin-bottom: 30rpx;
+    overflow: hidden;
 }
 
-.g-img image{
-    width:336rpx;
-    height:336rpx;
+.g-img image {
+    width: 336rpx;
+    height: 336rpx;
 }
 
-.g{
-    margin:30rpx;
+.g {
+    margin: 30rpx;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.g-bar{
+.g-bar {
     display: flex;
-    align-items:center;
-}
-.g-sale{
-    font-size:22rpx;
-    color:#777;
-}
-.g-cont{
-    padding:20rpx 30rpx;
-}
-.g-title{
-    font-size:26rpx;
-    color:#333;
-    margin-bottom:20rpx;
+    align-items: center;
 }
 
-.tab{
-    margin:30rpx 10rpx;
+.g-sale {
+    font-size: 22rpx;
+    color: #777;
 }
-.tab swiper{
-    width:100%;
-    height:80rpx;
+
+.g-cont {
+    padding: 20rpx 30rpx;
 }
-.tab swiper-item{
-    width:30%;
-    height:66rpx;
+
+.g-title {
+    font-size: 26rpx;
+    color: #333;
+    margin-bottom: 20rpx;
 }
-.tab view{
-    border:1px solid #eee;
-    padding:10rpx 20rpx;
-    color:#333;
-    font-size:26rpx;
-    line-height:56rpx;
-    margin:0 20rpx;
-    justify-content:space-between;
-    text-align:center;
-    border-radius:4rpx;
+
+.tab {
+    margin: 30rpx 10rpx;
 }
-.tab view.active{
-    border:1px solid #AF1654;
-    background:#AF1654;
-    color:#fff;
+
+.tab swiper {
+    width: 100%;
+    height: 80rpx;
+}
+
+.tab swiper-item {
+    width: 30%;
+    height: 66rpx;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.tab view {
+    border: 1px solid #eee;
+    padding: 10rpx 20rpx;
+    color: #333;
+    font-size: 26rpx;
+    line-height: 56rpx;
+    margin: 0 20rpx;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 4rpx;
+}
+
+.tab view.active {
+    border: 1px solid #af1654;
+    background: #af1654;
+    color: #fff;
+}
+
+
+.tab-img image {
+    width: 120rpx;
+    height: 120rpx;
+}
+.tab-img swiper{
+    height:180rpx;
+}
+.tab-img view{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+.tab-img view.active{
+    background:#fff;
 }

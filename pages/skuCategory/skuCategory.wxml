@@ -1,11 +1,13 @@
 
-<view class='tab'>
+<view class='tab {{isImgCat?"tab-img":""}}'>
     <swiper display-multiple-items='3' next-margin='50px'>
-        <swiper-item wx:for="{{['分类1','分类2','分类3','分类3']}}">
+        <swiper-item wx:for="{{category}}">
         <view bindtap='toggleCat'
             class='{{currentTab == index ?"active":""}}'
          data-index="{{index}}">
-        {{item}}</view></swiper-item>
+            <image wx:if="{{isImgCat}}" src="{{item}}"></image>
+            <block wx:else>{{item}}</block>
+        </view></swiper-item>
     </swiper>
 </view>
 
