@@ -1,0 +1,16 @@
+<view>
+    <view class='m-item' wx:for='{{list}}'>
+    
+        <view class='m-img'>
+            <image src='{{item.img}}'></image>
+        </view>
+
+        <view class='m-cont'>
+            <view class='m-name'>{{item.name}}</view>
+            <view class='m-tag'> 
+                <view wx:for="{{item.tag}}" wx:key="tags" wx:for-item="titem">{{titem}}</view>
+                
+             </view>
+        </view>
+    </view>
+</view>

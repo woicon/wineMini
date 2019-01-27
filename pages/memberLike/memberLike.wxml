@@ -1,0 +1,11 @@
+<view >
+    <view wx:for="{{post}}" wx:key="post" class='t-item bline {{index == 0 ? "t-item-head":""}}'>
+        <view class='t-img'>
+            <image src='{{item.cover}}'> </image>
+        </view>
+        <view class='t-cont'>
+            <view> {{item.title}}</view>
+            <view class='t-content' wx:if="{{index==0}}"> {{item.exports}}</view>
+        </view>
+    </view>
+</view>

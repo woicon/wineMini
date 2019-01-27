@@ -7,6 +7,8 @@
         "pages/member/member",
         "pages/memberVip/memberVip",
         "pages/memberFav/memberFav",
+        "pages/memberLike/memberLike",
+        "pages/memberAttention/memberAttention",
         "pages/mall/mall",
         "pages/coupon/coupon",
         "pages/cargo/cargo",

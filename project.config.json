@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 24,
+			"current": 25,
 			"list": [
 				{
 					"id": -1,
@@ -187,6 +187,12 @@
 					"id": -1,
 					"name": "memberFav",
 					"pathName": "pages/memberFav/memberFav",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "memberLike",
+					"pathName": "pages/memberLike/memberLike",
 					"query": ""
 				}
 			]
