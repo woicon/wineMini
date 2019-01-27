@@ -4,6 +4,45 @@
     left:0;
     right:0;
     top:0;
+    z-index:10;
+    background:#fff;
 
 }
 page{padding-top:100rpx;}
+
+.t-item{
+    display: flex;
+    margin:30rpx;
+    padding:30rpx 0;
+}
+.t-img{
+    width:200rpx;
+    height:200rpx;
+    margin-right:30rpx;
+}
+.t-img image{
+    width:200rpx;
+    height:200rpx;
+     border-radius:10rpx;
+}
+.t-title{
+    font-size:30rpx;
+    color:#333;
+}
+.t-content{
+    font-size:24rpx;
+    color:#666;
+
+}
+.t-cont{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.t-item-head .t-img,.t-item-head .t-img image{
+    width:310rpx;
+    height:220rpx;
+   
+
+}
