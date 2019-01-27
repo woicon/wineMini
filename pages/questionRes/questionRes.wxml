@@ -1,15 +1,19 @@
 
-<view class='r-head'>
-    <view>测试结果</view>
-    <view>恭喜您，通过测试了！</view>
+<view class='q-head {{isPass?"":"disable"}}'>
+    <view class='q-headcont'>
+        <view>测试结果</view>
+        <view> {{!isPass ? '抱歉，您没有通过！' :'恭喜您，通过测试了！'}}</view>
+    </view>
+    <image src='../../images/bgs.png'></image>
 </view>
 
 <view>
     <view wx:for="{{list}}" class='q-list'>
-        <view>{{item.title}}</view>
-        <view>
-            <view wx:for="{{item.list}}" wx:for-item="sitem" wx:for-index="sindex">
-                {{indexs[sindex]}}、{{sitem}}
+        <view class='q-title'>{{index+1}}.{{item.title}}</view>
+        <view class='q-cont bline'>
+            <view wx:for="{{item.list}}" class='q-items' wx:for-item="sitem" wx:for-index="sindex">
+<view class="q-radio {{indexs[sindex] == item.youRes ? 'active' : ''}}"></view>
+               <text> {{indexs[sindex]}}、{{sitem}}</text>
             </view>
         </view>
         <view>正确选项：{{item.res}}</view>

@@ -27,7 +27,8 @@ Page({
                 res: 'A',
                 youRes: 'A',
             },
-        ]
+        ],
+        isPass:true
     },
 
     onLoad: function (options) {

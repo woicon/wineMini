@@ -1,28 +1,111 @@
-.q-list{
-    margin:30rpx;
-    background:#F3F3F3;
-    border-radius:20rpx;
-    padding:60rpx;
-    font-size:24rpx;
-    
+page {
+    padding-bottom:200rpx;
 }
 
-.q-bar{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    padding:40rpx 0;
-    position:fixed;
-    left:0;
-    right:0;
-    bottom:0;
-    background:#fff;
+.q-list {
+    margin: 30rpx;
+    background: #f3f3f3;
+    border-radius: 20rpx;
+    padding: 40rpx;
+    font-size: 24rpx;
 }
-.q-bar>view{
-    width:248rpx;
-    line-height:76rpx;
-    height:76rpx;
+
+.q-items {
+    margin: 20rpx 0;
+    display: flex;
+    align-items:center;
+    font-size:26rpx;
+}
+.q-items text{
+    flex: 1;
+}
+.q-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40rpx 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+}
+
+.q-bar>view {
+    width: 248rpx;
+    line-height: 76rpx;
+    height: 76rpx;
+    font-size: 36rpx;
+    margin: 0 20rpx;
+    font-weight: 800;
+}
+
+.q-head {
+    margin: 30rpx;
+    width: 690rpx;
+    height: 240rpx;
+    position: relative;
+    border-radius: 20rpx;
+    overflow: hidden;
+     background: linear-gradient(-270deg, #d73174 0%, #af1654 100%);
+}
+
+.q-head image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 690rpx;
+    height: 240rpx;
+   
+}
+.q-head.disable{
+   background: #999999;
+}
+.q-headcont {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.q-radio {
+    border: 1px solid #999;
+    width: 26rpx;
+    height: 26rpx;
+    border-radius: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:20rpx;
+}
+.q-cont{
+    padding:30rpx 0;
+    margin:0 0 30rpx;
+}
+.q-title{
     font-size:36rpx;
-    margin:0 20rpx;
-    font-weight:800;
+    line-height:1.6;
+    margin-bottom:20rpx;
+}
+.q-radio::after {
+    content: '';
+    border-radius: 90px;
+    display: block;
+    width: 19rpx;
+    height: 19rpx;
+    background: #999;
+}
+.q-radio.active{
+    border-color:#af1654;
+
+}
+.q-radio.active::after{
+    background:#af1654;
 }
