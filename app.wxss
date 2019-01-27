@@ -59,6 +59,11 @@ page {
     background: #BFBFBF;
 
 }
+.button-white{
+    background: #FFFFFF;
+box-shadow: 0 5px 12px 0 rgba(185,146,162,0.50);
+color:#444;
+}
 .tline, .bline, .rline {
     position: relative;
 }
@@ -591,3 +596,71 @@ page {
     background: #af1654;
     border-radius: 0 22px 22px 0;
 }
+
+
+
+/* //panel */
+
+.panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.panel-title {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 30rpx;
+    margin: 0 90rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.panel-content {
+    background: #fff;
+    border-radius: 10rpx;
+    width: 480rpx;
+    height: 300rpx;
+    padding: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.panel .ico {
+    position: absolute;
+    left: 50%;
+    bottom: -110rpx;
+    margin-left: -40rpx;
+    width: 80rpx;
+    height: 80rpx;
+    font-size: 52rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.panel-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90rpx;
+}
+
+.panel-bar>view {
+    margin: 0 20rpx;
+    width: 200rpx;
+    height: 60rpx;
+}
+

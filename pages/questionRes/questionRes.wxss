@@ -1,0 +1,28 @@
+.q-list{
+    margin:30rpx;
+    background:#F3F3F3;
+    border-radius:20rpx;
+    padding:60rpx;
+    font-size:24rpx;
+    
+}
+
+.q-bar{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    padding:40rpx 0;
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#fff;
+}
+.q-bar>view{
+    width:248rpx;
+    line-height:76rpx;
+    height:76rpx;
+    font-size:36rpx;
+    margin:0 20rpx;
+    font-weight:800;
+}

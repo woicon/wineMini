@@ -1,0 +1,41 @@
+<view class='q-head'>
+    <view class='d-htitle'>
+        <view class='ico'>
+            <image src='../../images/pen.png'></image>
+        </view>
+        <view>
+            <view class='q-htit'>在线测试</view>
+            <view class='q-sub'>奋力答题中...</view>
+        </view>
+    </view>
+    <view class='q-step'>
+        {{stepIndex+1}}/{{step}}
+    </view>
+</view>
+<view>
+
+    <view class='q-list'>
+        <view class='q-title'>{{stepIndex+1}}.{{quesitons[stepIndex].title}}</view>
+        <view bindtap='getQuestion' class='q-item {{currentQuestion == index ? "active" : ""}}' data-index="{{index}}" wx:for="{{quesitons[stepIndex].list}}">
+            {{indexs[index]}}、{{item}}
+        </view>
+    </view>
+</view>
+
+<view class='q-bar'>
+    <view bindtap='submitQuestion' class='button' wx:if="{{stepIndex == step-1}}">完成</view>
+    <block wx:else>
+        <view bindtap='prevQuestion' class='button button-gray' wx:if="{{stepIndex>0}}">上一题</view>
+        <view bindtap='nextQuestion' class='button {{currentQuestion < button-gray}}'>下一题</view>
+    </block>
+</view>
+
+<view wx:if="{{showPanel}}" class='panel'>
+    <view class='panel-content'>
+        <view class='panel-title'>恭喜，提交成功！</view>
+        <view class='panel-bar'>
+            <view class='button button-white' bindtap='viewResult'>查看结果</view>
+        </view>
+        <view class='ico ico-close' bindtap='closePanel'></view>
+    </view>
+</view>

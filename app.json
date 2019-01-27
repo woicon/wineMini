@@ -22,7 +22,9 @@
         "pages/professional/professional",
         "pages/skuCategory/skuCategory",
         "pages/skuRanking/skuRanking",
-        "pages/play/play"
+        "pages/play/play",
+        "pages/question/question",
+        "pages/questionRes/questionRes"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -34,15 +36,15 @@
         "banner": "component/banner/banner"
     },
     "tabBar": {
-        "background":"#F8F8F8",
-        "selectedColor":"#AF1654",
-        "borderStyle":"#F8F8F8",
-        "color":"#666666",
+        "background": "#F8F8F8",
+        "selectedColor": "#AF1654",
+        "borderStyle": "#F8F8F8",
+        "color": "#666666",
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "iconPath":"images/class.png",
-                "selectedIconPath":"images/class-sel.png",
+                "iconPath": "images/class.png",
+                "selectedIconPath": "images/class-sel.png",
                 "text": "求学"
             },
             {
