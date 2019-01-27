@@ -1,6 +1,6 @@
 Page({
-
     data: {
+        showPanel:true,
         detail: {
             classCover: '../../images/bs.jpg',
             title: "苏格兰官方威士忌大使认证课程",
@@ -44,7 +44,11 @@ Page({
             currentTab: e.target.dataset.index
         })
     },
-
+    closePanel(){
+        this.setData({
+            showPanel:false
+        })
+    },
     onShareAppMessage () {
 
     }

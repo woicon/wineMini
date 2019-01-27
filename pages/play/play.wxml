@@ -53,8 +53,22 @@
 
     <view class='button' wx:if="{{free}}">立即观看</view>
 
-            <view class='sku-btn' wx:else>
+    <view class='sku-btn' wx:else>
         <view class='sku-add'>加入购物车</view>
         <view class='sku-buy'>立即购买</view>
+    </view>
+</view>
+
+<view class='panel' wx:if="{{showPanel}}">
+    <view class='panel-content'>
+        <view class='panel-title'>
+            试看结束， 购买后才能继续观看哦！
+        </view>
+        <view class='panel-bar'>
+            <view class='button button-gray'>再想想</view>
+            <view class='button'>立即购买</view>
+        </view>
+
+        <view bindtap='closePanel' class='ico ico-close'></view>
     </view>
 </view>
